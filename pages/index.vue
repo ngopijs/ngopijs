@@ -1,5 +1,6 @@
 <template>
   <div class="body-bg antialiased bg-white grid place-content-center overflow-hidden bg-cover bg-fixed bg-no-repeat">
+    <Terminal />
   </div>
   <Footer />
 </template>
