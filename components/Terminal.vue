@@ -41,7 +41,7 @@ const onInstallFinished = () => {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 [vt__prompt]::before {
   margin-right: 0.75em;
   color: #34e4db;
@@ -49,16 +49,23 @@ const onInstallFinished = () => {
 }
 
 .v-termynal {
-  width: 700px;
-  padding: 70px 35px 35px;
-  font-size: 12px;
+  width: 380px;
+  padding: 50px 15px 20px;
+  font-size: 10px;
   border-radius: 10px;
   backdrop-filter: blur(8px);
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6)) opacity(0.9);
   -webkit-filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6)) opacity(0.9);
 
+  @screen md {
+    width: 700px;
+    font-size: 12px;
+    padding: 70px 35px 35px;
+  }
+
   .vt__line {
     line-height: 1.55;
+    white-space: pre-wrap;
 
     &.vt__empty-prompt {
       &::before {
@@ -75,7 +82,11 @@ const onInstallFinished = () => {
     line-height: 2.65em;
     border-radius: 10px 10px 0 0;
     background-color: rgb(255 255 255);
-    content: "ngopijs —- root@ngopijs—pc -- -- zsh -- 125x30";
+    content: "ngopijs —- ... zsh -- 125x30";
+
+    @screen md {
+      content: "ngopijs —- root@ngopijs—pc -- -- zsh -- 125x30";
+    }
   }
 
   &::before {
